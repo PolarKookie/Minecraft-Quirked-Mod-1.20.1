@@ -14,7 +14,7 @@ public class MinecraftQuirkedMod implements ModInitializer {
 	public static final String MOD_ID = "minecraftquirkedmod";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final SimpleParticleType OFA_LIGHTNING = FabricParticleTypes.simple();
+	public static final DefaultParticleType OFA_LIGHTNING = FabricParticleTypes.simple();
 
 	@Override
 	public void onInitialize() {
