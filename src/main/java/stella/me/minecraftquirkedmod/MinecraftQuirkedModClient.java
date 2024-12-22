@@ -9,5 +9,8 @@ public class MinecraftQuirkedModClient implements ClientModInitializer {
     public void onInitializeClient() {
 
         ParticleFactoryRegistry.getInstance().register(MinecraftQuirkedMod.OFA_LIGHTNING, BubblePopParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MinecraftQuirkedMod.OFA_LIGHTNING2, BubblePopParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MinecraftQuirkedMod.OFA_LIGHTNING3, BubblePopParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MinecraftQuirkedMod.OFA_LIGHTNING4, BubblePopParticle.Factory::new);
     }
 }
