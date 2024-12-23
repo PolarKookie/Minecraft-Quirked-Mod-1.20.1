@@ -1,3 +1,7 @@
 {
-  "item.minecraftquirkedmod.bandage": "Bandage"
+  "item.minecraftquirkedmod.bandage": "Bandage",
+  "item.minecraftquirkedmod.cloth": "Cloth",
+  "item.minecraftquirkedmod.healing_infused_cloth": "Healing Infused Cloth",
+
+  "itemgroup.quirked": "Quirked Items"
 }

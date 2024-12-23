@@ -12,6 +12,8 @@ import stella.me.minecraftquirkedmod.MinecraftQuirkedMod;
 public class ModItems {
 
     public static final Item BANDAGE = registerItem("bandage", new Item(new Item.Settings()));
+    public static final Item CLOTH = registerItem("cloth", new Item(new Item.Settings()));
+    public static final Item HEALING_INFUSED_CLOTH = registerItem("healing_infused_cloth", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MinecraftQuirkedMod.MOD_ID, name), item);
@@ -22,6 +24,8 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
            entries.add(BANDAGE);
+           entries.add(CLOTH);
+            entries.add(HEALING_INFUSED_CLOTH);
         });
     }
 }

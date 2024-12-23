@@ -9,6 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import stella.me.minecraftquirkedmod.item.ModItemGroups;
 import stella.me.minecraftquirkedmod.item.ModItems;
 
 public class MinecraftQuirkedMod implements ModInitializer {
@@ -28,6 +29,7 @@ public class MinecraftQuirkedMod implements ModInitializer {
 		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, "ofa_lightning4"), OFA_LIGHTNING4);
 
 // Items v
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 	}
 }
