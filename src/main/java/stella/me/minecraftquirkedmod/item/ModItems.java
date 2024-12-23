@@ -1,8 +1,6 @@
 package stella.me.minecraftquirkedmod.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -13,19 +11,17 @@ import stella.me.minecraftquirkedmod.MinecraftQuirkedMod;
 
 public class ModItems {
 
-    public static final Item bandage = registerItem("bandage", new Item(new FabricItemSettings()));
-
-    private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(bandage);
-    }
+    public static final Item BANDAGE = registerItem("bandage", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(MinecraftQuirkedMod.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, Identifier.of(MinecraftQuirkedMod.MOD_ID, name), item);
     }
 
     public static void registerModItems() {
-        MinecraftQuirkedMod.LOGGER.info("Registering Mod Items for " + MinecraftQuirkedMod.MOD_ID);
+        MinecraftQuirkedMod.LOGGER.info("Items have been registered for" + MinecraftQuirkedMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientTabItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+           entries.add(BANDAGE);
+        });
     }
 }
