@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "",
+    "WWW",
+    ""
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wool"
+    }
+  },
+  "result": {
+    "id": "minecraftquirkedmod:cloth"
+  }
+}
